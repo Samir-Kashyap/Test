@@ -27,6 +27,14 @@
                 </div>
                 <button type="submit" class="btn btn-primary" [disabled]="!frmLogin.valid">Submit</button>
             </form>
+
+            <form [formGroup]="frmExample" (ngSubmit) = "onSubmit2()">
+                <div><label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" formControlName="email">
+                    <span *ngIf="frmExample.controls['email'].errors && !frmExample.controls['email'].pristine"> Email required</span></div>
+                
+                <button type="submit" class="btn btn-primary" [disabled]="!frmExample.valid">Submit</button>
+            </form>
         </div>
         
        

@@ -1,0 +1,12 @@
+
+<nav>
+    <ul>
+        <li><a routerLink="/home"> home</a></li>
+        <li><a routerLink="/register"> register</a></li>
+        <li><a routerLink="/login"> login</a></li>
+        <li><a routerLink="/directives"> directives</a></li>
+    </ul>
+</nav>
+<button (click)="show = !show"> {{show ? 'hide' : 'show'}} </button> 
+<br>
+<div *ngIf = "show"> Text to show</div>
